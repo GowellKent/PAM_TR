@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PAM_TR">
         <activity
+            android:name=".ForgorActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

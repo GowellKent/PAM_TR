@@ -34,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 cekLogin();
             }
         });
+
+        txtForgor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                forgotPassword();
+            }
+        });
     }
 
     public void cekLogin(){
@@ -67,5 +74,11 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alert1 = builder1.create();
             alert1.show();
         }
+    }
+
+    public void forgotPassword(){
+        Intent intentToForgor = new Intent(MainActivity.this, ForgorActivity.class);
+
+        startActivity(intentToForgor);
     }
 }
