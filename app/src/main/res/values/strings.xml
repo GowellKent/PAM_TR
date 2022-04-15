@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PAM_TR</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_welcome">Welcome</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_signup">Sign Up</string>
+    <string name="Forgor">Forgot Password?</string>
 </resources>
