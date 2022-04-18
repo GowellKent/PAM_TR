@@ -6,10 +6,17 @@
         <entry key="..\:/Files/Kuliah/Tugas/PAM/PAM_TR/app/src/main/res/layout/activity_forgor.xml" value="0.35260416666666666" />
         <entry key="..\:/Files/Kuliah/Tugas/PAM/PAM_TR/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Files/Kuliah/Tugas/PAM/PAM_TR/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_detail_akun.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_forgor.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_home_admin.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_home_admin_fragment.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/fragment_home_admin.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/layout/item_listview.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/PAM_TR/app/src/main/res/menu/bottom_navigation.xml" value="0.2" />
       </map>
     </option>
   </component>

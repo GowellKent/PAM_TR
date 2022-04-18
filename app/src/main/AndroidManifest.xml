@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PAM_TR"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailAkun"
+            android:exported="false" />
+        <activity
             android:name=".HomeFragment"
             android:exported="false" />
         <activity

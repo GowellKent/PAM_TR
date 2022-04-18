@@ -42,7 +42,7 @@ public class ListViewAdapter extends ArrayAdapter<Data> {
             public void onClick(View v) {
                 Toast.makeText(getContext(), data.getNama(), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                Intent intent = new Intent(v.getContext(), DetailAkun.class);
                 v.getContext().startActivity(intent);
             }
         });
