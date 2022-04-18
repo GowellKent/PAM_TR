@@ -64,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
                     String username = ds.get("username").toString();
                     String password = ds.get("password").toString();
 
+                    String user = txtUsername.getEditText().getText().toString();
+
                     Intent intentToHome = new Intent(MainActivity.this, HomeActivity.class);
+                    intentToHome.putExtra("user", user);
                     Intent intentToHomeAdmin = new Intent(MainActivity.this, HomeAdminActivity.class);
 
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(txtLogin.getContext());

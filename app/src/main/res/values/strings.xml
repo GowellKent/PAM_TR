@@ -6,6 +6,7 @@
     <string name="txt_password">Password</string>
     <string name="txt_signup">Sign Up</string>
     <string name="Forgor">Forgot Password?</string>
+    <string name="usernameProfile">Hello, [Name]!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
