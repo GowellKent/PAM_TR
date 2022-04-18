@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     String password = ds.get("password").toString();
 
                     Intent intentToHome = new Intent(MainActivity.this, HomeActivity.class);
+                    Intent intentToHomeAdmin = new Intent(MainActivity.this, HomeAdminActivity.class);
 
                     AlertDialog.Builder builder1 = new AlertDialog.Builder(txtLogin.getContext());
                     builder1.setTitle("Login Gagal");
@@ -76,7 +77,12 @@ public class MainActivity extends AppCompatActivity {
                         builder1.setMessage("Welcome "+txtUsername.getEditText().getText().toString()+"!");
                         AlertDialog alert1 = builder1.create();
                         alert1.show();
-                        startActivity(intentToHome);
+
+                        if (txtUsername.getEditText().getText().toString().equals("admin")){
+                            startActivity(intentToHomeAdmin);
+                        }else {
+                            startActivity(intentToHome);
+                        }
                     }
                     else if(username != txtUsername.getEditText().getText().toString() &&  password.equals(txtPassword.getEditText().getText().toString())){
                         builder1.setMessage("Username Tidak Terdaftar");
@@ -89,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
                         alert1.show();
                     }
                     else{
-                        builder1.setMessage("Username Tidak Terdaftar");
-                        AlertDialog alert1 = builder1.create();
-                        alert1.show();
                     }
                 }
             }
