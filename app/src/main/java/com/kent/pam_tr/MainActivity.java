@@ -9,9 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FirebaseFirestore db;
 
     private TextView txtLogin,txtForgor;
     private TextInputLayout txtUsername, txtPassword;
@@ -25,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         txtLogin = findViewById(R.id.txtLogin);
         txtForgor = findViewById(R.id.txtForgor);
         txtUsername = findViewById(R.id.txtInputUsername);
-        txtPassword = findViewById(R.id.txtInputUsername);
+        txtPassword = findViewById(R.id.txtInputPassword);
         btnLogin = findViewById(R.id.btnLogin);
+
+        db = FirebaseFirestore.getInstance();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,36 +55,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cekLogin(){
-        String user = "aaaa", pass = "aaaa";
-        Intent intentToHome = new Intent(MainActivity.this, HomeActivity.class);
+        db.collection("akun").get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                List<DocumentSnapshot> cekAkun = queryDocumentSnapshots.getDocuments();
+                for (DocumentSnapshot ds : cekAkun) {
+                    String username = ds.get("username").toString();
+                    String password = ds.get("password").toString();
 
-        AlertDialog.Builder builder1 = new AlertDialog.Builder(txtLogin.getContext());
-        builder1.setTitle("Login Gagal");
-        builder1.setIcon(android.R.drawable.ic_dialog_alert);
+                    Intent intentToHome = new Intent(MainActivity.this, HomeActivity.class);
 
-        if (user.equalsIgnoreCase(txtUsername.getEditText().getText().toString()) && pass.equalsIgnoreCase(txtPassword.getEditText().getText().toString())){
-            builder1.setTitle("Login berhasil");
-            builder1.setIcon(android.R.drawable.ic_dialog_info);
-            builder1.setMessage("Welcome "+txtUsername.getEditText().getText().toString()+"!");
-            AlertDialog alert1 = builder1.create();
-            alert1.show();
-            startActivity(intentToHome);
-        }
-        else if(user != txtUsername.getEditText().getText().toString() &&  pass.equalsIgnoreCase(txtPassword.getEditText().getText().toString())){
-            builder1.setMessage("Username Tidak Terdaftar");
-            AlertDialog alert1 = builder1.create();
-            alert1.show();
-        }
-        else if(pass != txtPassword.getEditText().getText().toString() &&  user.equalsIgnoreCase(txtUsername.getEditText().getText().toString())){
-            builder1.setMessage("Password Salah");
-            AlertDialog alert1 = builder1.create();
-            alert1.show();
-        }
-        else{
-            builder1.setMessage("Username Tidak Terdaftar");
-            AlertDialog alert1 = builder1.create();
-            alert1.show();
-        }
+                    AlertDialog.Builder builder1 = new AlertDialog.Builder(txtLogin.getContext());
+                    builder1.setTitle("Login Gagal");
+                    builder1.setIcon(android.R.drawable.ic_dialog_alert);
+
+                    if (username.equals(txtUsername.getEditText().getText().toString()) && password.equals(txtPassword.getEditText().getText().toString())){
+                        builder1.setTitle("Login berhasil");
+                        builder1.setIcon(android.R.drawable.ic_dialog_info);
+                        builder1.setMessage("Welcome "+txtUsername.getEditText().getText().toString()+"!");
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                        startActivity(intentToHome);
+                    }
+                    else if(username != txtUsername.getEditText().getText().toString() &&  password.equals(txtPassword.getEditText().getText().toString())){
+                        builder1.setMessage("Username Tidak Terdaftar");
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                    }
+                    else if(password != txtPassword.getEditText().getText().toString() &&  username.equals(txtUsername.getEditText().getText().toString())){
+                        builder1.setMessage("Password Salah");
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                    }
+                    else{
+                        builder1.setMessage("Username Tidak Terdaftar");
+                        AlertDialog alert1 = builder1.create();
+                        alert1.show();
+                    }
+                }
+            }
+        });
     }
 
     public void forgotPassword(){
