@@ -10,18 +10,18 @@
         android:id="@+id/content_frame_admin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation">
+        android:layout_above="@+id/bot_nav_admin">
 
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bot_nav_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         menu:itemIconTint="@color/black"
         menu:labelVisibilityMode="labeled"
-        menu:menu="@menu/bottom_navigation"
+        menu:menu="@menu/bot_nav_admin"
         />
 
 </RelativeLayout>
