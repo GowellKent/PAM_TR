@@ -12,34 +12,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtnamaFile"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Nama File"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose File"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtnamaFile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Nama File"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose File"/>
+
+        </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
