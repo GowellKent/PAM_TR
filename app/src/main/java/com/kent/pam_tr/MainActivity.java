@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
 
-    private TextView txtLogin,txtForgor;
+    private TextView txtLogin;
     private TextInputLayout txtUsername, txtPassword;
     private Button btnLogin;
 
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtLogin = findViewById(R.id.txtLogin);
-        txtForgor = findViewById(R.id.txtForgor);
         txtUsername = findViewById(R.id.txtInputUsername);
         txtPassword = findViewById(R.id.txtInputPassword);
         btnLogin = findViewById(R.id.btnLogin);
@@ -42,13 +41,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 cekLogin();
-            }
-        });
-
-        txtForgor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                forgotPassword();
             }
         });
     }
@@ -86,12 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intentToHome);
                         }
                     }
-                    else if(username != txtUsername.getEditText().getText().toString() &&  password.equals(txtPassword.getEditText().getText().toString())){
-                        builder1.setMessage("Username Tidak Terdaftar");
-                        AlertDialog alert1 = builder1.create();
-                        alert1.show();
-                    }
-                    else if(password != txtPassword.getEditText().getText().toString() &&  username.equals(txtUsername.getEditText().getText().toString())){
+                    else if(username.equals(txtUsername.getEditText().getText().toString()) && password != txtPassword.getEditText().getText().toString() ){
                         builder1.setMessage("Password Salah");
                         AlertDialog alert1 = builder1.create();
                         alert1.show();
@@ -101,11 +88,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    public void forgotPassword(){
-        Intent intentToForgor = new Intent(MainActivity.this, ForgorActivity.class);
-
-        startActivity(intentToForgor);
     }
 }
