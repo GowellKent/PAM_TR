@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtLogin,txtForgor;
     private TextInputLayout txtUsername, txtPassword;
-    private Button btnLogin;
+    private Button btnLogin, btnRegis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         txtUsername = findViewById(R.id.txtInputUsername);
         txtPassword = findViewById(R.id.txtInputPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnRegis = findViewById(R.id.btnRegis);
 
         db = FirebaseFirestore.getInstance();
 
@@ -51,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 forgotPassword();
             }
+        });
+
+        btnRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { Register(); }
         });
     }
 
@@ -108,5 +114,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intentToForgor = new Intent(MainActivity.this, ForgorActivity.class);
 
         startActivity(intentToForgor);
+    }
+
+    public void Register(){
+        Intent intentToRegister = new Intent(MainActivity.this, RegisterActivity.class);
+
+        startActivity(intentToRegister);
     }
 }

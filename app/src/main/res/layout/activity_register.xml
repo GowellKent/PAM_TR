@@ -8,28 +8,53 @@
     android:gravity="center"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    tools:context=".MainActivity"
+    tools:context=".RegisterActivity"
     >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
         <TextView
-            android:id="@+id/txtLogin"
+            android:id="@+id/txtRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:text="@string/txt_login"
-            android:textSize="14pt" />
+            android:text="@string/txt_regis"
+            android:textSize="14pt"
+            android:gravity="center_horizontal"/>
 
-    </LinearLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputUsername"
+        android:id="@+id/txtregisNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtRegisNim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NIM"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtRegisUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/txt_username"
@@ -44,7 +69,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputPassword"
+        android:id="@+id/txtRegisPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/txt_password"
@@ -58,38 +83,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/txtForgor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Forgor"
-        android:gravity="end"
-        android:textSize="12dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="end">
 
         <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_login"
-            android:layout_gravity="end"
-            />
-
-        <Button
-            android:id="@+id/btnRegis"
+            android:id="@+id/btnDaftar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_regis"
             android:layout_gravity="end"
+            android:layout_marginTop="10dp"
             />
-
-
-    </LinearLayout>
-
 
 </LinearLayout>
