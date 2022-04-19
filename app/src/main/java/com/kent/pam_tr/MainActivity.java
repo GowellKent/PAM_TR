@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         txtUsername = findViewById(R.id.txtInputUsername);
         txtPassword = findViewById(R.id.txtInputPassword);
         btnLogin = findViewById(R.id.btnLogin);
-
         db = FirebaseFirestore.getInstance();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {

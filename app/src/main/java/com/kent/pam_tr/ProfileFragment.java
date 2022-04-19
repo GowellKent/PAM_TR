@@ -49,7 +49,7 @@ public class ProfileFragment extends Fragment {
                                 String nim = ds.get("nim").toString();
 
                                 nameProfile.setText(nama);
-                                nimProfile.setText(nim);
+                                nimProfile.setText("NIM = " + nim);
                             }
                         }
 
