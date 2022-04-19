@@ -13,22 +13,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/txtSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Search NIM"
-            app:startIconDrawable="@drawable/ic_round_search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_margin="15dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:drawableEnd="@drawable/ic_round_search"
+            android:layout_margin="15dp"
+            android:inputType="text"/>
 
         <ListView
             android:id="@+id/list_view"

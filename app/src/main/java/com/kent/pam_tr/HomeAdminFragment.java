@@ -5,14 +5,19 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -24,6 +29,7 @@ public class HomeAdminFragment extends Fragment {
 
     private ListView listView;
     private ArrayList<Data> dataArrayList;
+    private EditText txtSearch;
     FirebaseFirestore db;
 
     @Override
@@ -32,6 +38,8 @@ public class HomeAdminFragment extends Fragment {
 
         listView = (ListView) root.findViewById(R.id.list_view);
         dataArrayList = new ArrayList<>();
+
+        txtSearch = (EditText) root.findViewById(R.id.txtSearch);
 
         db = FirebaseFirestore.getInstance();
 
@@ -55,6 +63,21 @@ public class HomeAdminFragment extends Fragment {
                                     getContext(), dataArrayList);
 
                             listView.setAdapter(adapter);
+                            txtSearch.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                                    adapter.getFilter().filter(charSequence);
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable editable) {
+
+                                }
+                            });
                         } else {
                             Toast.makeText(getContext(),
                                     "No data found in Database", Toast.LENGTH_SHORT).show();
