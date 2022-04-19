@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PointFragment">
+
+    <FrameLayout
+        android:id="@+id/point_content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:stretchColumns="*"
+            >
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:text="Rumpun"
+                    android:textSize="18dp"
+                    android:padding="3dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poin Minimal"
+                    android:textSize="18dp"
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Poin"
+                    android:textSize="18dp"
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:padding="3dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell"
+                    android:text="OMB"
+                    android:textSize="14dp"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell"
+                    android:text="150"
+                    android:textSize="14dp"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:id="@+id/txtPoinOmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[poinOmb]"
+                    android:background="@drawable/cell"
+                    android:textSize="14dp"
+                    android:padding="3dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ketrampilan Professional"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:id="@+id/txtPoinPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[poinPro]"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keterampilan Humanistik"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="250"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:id="@+id/txtPoinHum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[poinHum]"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keterampilan Penunjang"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:id="@+id/txtPoinPen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[poinPen]"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="Total"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:gravity="center"
+                    android:padding="3dp"/>
+
+                <TextView
+                    android:id="@+id/txtPoinTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[totalPoin]"
+                    android:textSize="14dp"
+                    android:background="@drawable/cell"
+                    android:padding="3dp"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

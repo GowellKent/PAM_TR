@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sertifikat OMB"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+    <Button
+        android:id="@+id/fileOMB"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="upload File"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sertififkat Keterampilan Profesional"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+    <Button
+        android:id="@+id/fileKetProf"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Upload File"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sertififkat Keterampilan Humanistik"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+    <Button
+        android:id="@+id/fileKetHum"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Upload File"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sertififkat Keterampilan Penunjang"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+    <Button
+        android:id="@+id/fileKetPenunjng"
+        android:layout_marginTop="5dp"
+        android:textColor="#fff"
+        android:text="Upload File"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Button>
+
+
+
+</LinearLayout>
