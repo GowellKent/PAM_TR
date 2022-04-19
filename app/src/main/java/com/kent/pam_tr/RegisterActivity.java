@@ -45,6 +45,9 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Registrasi();
+
+                Intent intent = new Intent(view.getContext(), ProfileAdminFragment.class);
+                startActivity(intent);
             }
         });
 
@@ -57,6 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
         String nim =  txtRegisNim.getEditText().getText().toString();
         String username = txtRegisUsername.getEditText().getText().toString();
         String password = txtRegisPassword.getEditText().getText().toString();
+
 
             akun.put("nama",nama);
             akun.put("nim", nim);
@@ -73,6 +77,8 @@ public class RegisterActivity extends AppCompatActivity {
                         builder1.setIcon(R.drawable.ic_success);
                         AlertDialog alert1 = builder1.create();
                         alert1.show();
+
+
                     })
                     .addOnFailureListener(e -> {
                         Log.w(TAG, "Registrasi: ", e);
