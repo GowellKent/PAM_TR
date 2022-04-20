@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (txtUsername.getEditText().getText().toString().equals("admin")){
                             startActivity(intentToHomeAdmin);
+                            txtUsername.getEditText().setText("");
+                            txtPassword.getEditText().setText("");
                         }else {
                             startActivity(intentToHome);
                         }
