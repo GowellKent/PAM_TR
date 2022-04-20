@@ -35,12 +35,6 @@ public class HomeAdminActivity extends AppCompatActivity {
                                     .replace(R.id.content_frame_admin, new HomeAdminFragment())
                                     .commit();
                         }break;
-                        case R.id.page_point: {
-                            getSupportFragmentManager()
-                                    .beginTransaction()
-                                    .replace(R.id.content_frame_admin, new PointAdminFragment())
-                                    .commit();
-                        }break;
                         case R.id.page_profile: {
                             getSupportFragmentManager()
                                     .beginTransaction()
