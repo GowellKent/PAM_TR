@@ -56,16 +56,24 @@ public class RegisterActivity extends AppCompatActivity {
     public void Registrasi(){
 
         Map<String, Object> akun = new HashMap<>();
+        Map<String, Object> poin = new HashMap<>();
         String nama = txtRegisNama.getEditText().getText().toString();
         String nim =  txtRegisNim.getEditText().getText().toString();
         String username = txtRegisUsername.getEditText().getText().toString();
         String password = txtRegisPassword.getEditText().getText().toString();
+        int omb = 0, pro = 0, hum = 0, pen = 0, total = 0;
 
+            poin.put("omb", omb);
+            poin.put("pro", pro);
+            poin.put("hum", hum);
+            poin.put("pen", pen);
+            poin.put("total", total);
 
             akun.put("nama",nama);
             akun.put("nim", nim);
             akun.put("username", username);
             akun.put("password", password);
+            akun.put("poin", poin);
 
             db.collection("akun")
                     .add(akun)
