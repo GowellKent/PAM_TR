@@ -10,9 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
 public class ProfileAdminFragment extends Fragment {
-
     private Button btnRegister, btnLogout;
 
     @Override
@@ -39,4 +37,5 @@ public class ProfileAdminFragment extends Fragment {
 
         return root;
     }
+
 }

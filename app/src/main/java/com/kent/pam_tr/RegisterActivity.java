@@ -4,6 +4,8 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,8 +48,8 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Registrasi();
 
-                Intent intent = new Intent(view.getContext(), ProfileAdminFragment.class);
-                startActivity(intent);
+                Intent intent = new Intent(view.getContext(), HomeAdminActivity.class);
+                view.getContext().startActivity(intent);
             }
         });
 
@@ -85,8 +87,6 @@ public class RegisterActivity extends AppCompatActivity {
                         builder1.setIcon(R.drawable.ic_success);
                         AlertDialog alert1 = builder1.create();
                         alert1.show();
-
-
                     })
                     .addOnFailureListener(e -> {
                         Log.w(TAG, "Registrasi: ", e);
