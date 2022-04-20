@@ -4,7 +4,8 @@ public class Data {
     private String nama;
     private String nim;
 
-    public Data(){}
+    public Data() {
+    }
 
     public Data(String nama, String nim) {
         this.nama = nama;
