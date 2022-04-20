@@ -6,75 +6,41 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sertifikat OMB"
-        android:textSize="20dp"
-        android:textStyle="bold"></TextView>
-    <Button
-        android:id="@+id/fileOMB"
-        android:layout_marginTop="5dp"
-        android:textColor="#fff"
-        android:text="upload File"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Sertififkat Keterampilan Profesional"
-        android:textSize="20dp"
-        android:textStyle="bold">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtnamaFile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="Nama File"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    </TextView>
-    <Button
-        android:id="@+id/fileKetProf"
-        android:layout_marginTop="5dp"
-        android:textColor="#fff"
-        android:text="Upload File"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Sertififkat Keterampilan Humanistik"
-        android:textSize="20dp"
-        android:textStyle="bold">
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </TextView>
-    <Button
-        android:id="@+id/fileKetHum"
-        android:layout_marginTop="5dp"
-        android:textColor="#fff"
-        android:text="Upload File"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose File"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Sertififkat Keterampilan Penunjang"
-        android:textSize="20dp"
-        android:textStyle="bold">
+        </LinearLayout>
 
-    </TextView>
-    <Button
-        android:id="@+id/fileKetPenunjng"
-        android:layout_marginTop="5dp"
-        android:textColor="#fff"
-        android:text="Upload File"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </Button>
-
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Upload" />
 
 </LinearLayout>
