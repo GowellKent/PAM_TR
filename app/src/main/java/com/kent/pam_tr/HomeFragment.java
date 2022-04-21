@@ -131,6 +131,9 @@ public class HomeFragment extends Fragment {
                                     taskSnapshot.getStorage().getDownloadUrl().toString());
                             String uploadId = databaseReference.push().getKey();
                             databaseReference.child(uploadId).setValue(upload);
+
+                            getActivity().finish();
+                            startActivity(getActivity().getIntent());
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
