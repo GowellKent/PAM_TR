@@ -225,6 +225,79 @@
 
         </TableLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Input Poin"
+            android:gravity="center"
+            android:textSize="16dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="15dp">
+
+            <RadioButton
+                android:id="@+id/radioOMB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OMB"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/radioPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesi"
+                />
+
+            <RadioButton
+                android:id="@+id/radioHum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humanistik"
+                />
+
+            <RadioButton
+                android:id="@+id/radioPen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penunjang"/>
+
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputPoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Poin Keaktifan"
+            android:layout_marginHorizontal="15dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/tesbut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp"/>
+
     </LinearLayout>
 
 </LinearLayout>
