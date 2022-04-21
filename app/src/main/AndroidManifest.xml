@@ -3,6 +3,7 @@
     package="com.kent.pam_tr">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +15,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeAdminActivity" />
         <activity
             android:name=".DetailAkun"
             android:exported="false" />
