@@ -57,7 +57,9 @@ public class HomeFragment extends Fragment {
         btnUpload = (Button) root.findViewById(R.id.btnUpload);
         ivChooseFile = (ImageView) root.findViewById(R.id.ivChooseFile);
 
-        storageReference = FirebaseStorage.getInstance().getReference("uploads");
+        String namaFile = getActivity().getIntent().getStringExtra("user");
+
+        storageReference = FirebaseStorage.getInstance().getReference(namaFile);
         databaseReference = FirebaseDatabase.getInstance().getReference("uploads");
 
         btnUpload.setEnabled(false);
@@ -118,7 +120,7 @@ public class HomeFragment extends Fragment {
 
         if (mImageUri != null) {
             StorageReference fileReference = storageReference.child(System.currentTimeMillis()
-            + "." + getFileExtension(mImageUri));
+                    + "." + getFileExtension(mImageUri));
 
             uploadTask = fileReference.putFile(mImageUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

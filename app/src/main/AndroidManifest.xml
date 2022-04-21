@@ -8,15 +8,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="SIP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PAM_TR"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".RegisterActivity"
-            android:exported="false"
-            android:parentActivityName=".HomeAdminActivity" />
+            android:exported="false" />
         <activity
             android:name=".DetailAkun"
             android:exported="false" />
