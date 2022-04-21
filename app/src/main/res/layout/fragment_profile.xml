@@ -38,15 +38,6 @@
                 tools:layout_editor_absoluteY="315dp" />
 
         <Button
-            android:id="@+id/btnResetPassword"
-            app:icon="@drawable/ic_lock_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/ganti_password"
-            android:backgroundTint="@color/bluePrimary"/>
-
-        <Button
             android:id="@+id/btnLogout"
             app:icon="@drawable/ic_logout"
             android:layout_width="wrap_content"
