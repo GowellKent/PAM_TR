@@ -48,8 +48,8 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Registrasi();
 
-                Intent intent = new Intent(view.getContext(), HomeAdminActivity.class);
-                view.getContext().startActivity(intent);
+                finish();
+                startActivity(getIntent());
             }
         });
 

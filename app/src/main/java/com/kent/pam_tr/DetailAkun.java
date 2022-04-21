@@ -171,7 +171,7 @@ public class DetailAkun extends AppCompatActivity {
 
         int poinTambah = Integer.parseInt(txtInputPoin.getEditText().getText().toString());
 
-        int penBaru = poinTambah + ombAwal;
+        int penBaru = poinTambah + penAwal;
         int totalBaru = ombAwal + proAwal + humAwal + penBaru;
 
         db.collection("akun").document(docID).update("poin.pen", penBaru);
