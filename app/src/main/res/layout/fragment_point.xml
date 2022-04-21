@@ -225,7 +225,6 @@
                     android:padding="3dp"
                     android:textColor="@color/black"/>
 
-
             </TableRow>
 
         </TableLayout>

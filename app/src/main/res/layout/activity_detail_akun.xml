@@ -39,6 +39,7 @@
             >
 
             <TableRow
+                android:id="@+id/row1"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 >
@@ -51,6 +52,7 @@
                     android:text="Rumpun"
                     android:textSize="18dp"
                     android:padding="3dp"
+                    android:textColor="@color/black"
                     />
 
                 <TextView
@@ -60,7 +62,8 @@
                     android:textSize="18dp"
                     android:background="@drawable/cell"
                     android:gravity="center"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -69,11 +72,13 @@
                     android:textSize="18dp"
                     android:background="@drawable/cell"
                     android:gravity="center"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
             </TableRow>
 
             <TableRow
+                android:id="@+id/row2"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -83,7 +88,8 @@
                     android:background="@drawable/cell"
                     android:text="OMB"
                     android:textSize="14dp"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -91,7 +97,8 @@
                     android:background="@drawable/cell"
                     android:text="150"
                     android:textSize="14dp"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/txtPoinOmbDet"
@@ -100,11 +107,13 @@
                     android:text="[poinOmb]"
                     android:background="@drawable/cell"
                     android:textSize="14dp"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
             </TableRow>
 
             <TableRow
+                android:id="@+id/row3"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -114,7 +123,8 @@
                     android:text="Ketrampilan Professional"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,7 +132,8 @@
                     android:text="300"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/txtPoinProDet"
@@ -131,11 +142,13 @@
                     android:text="[poinPro]"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
             </TableRow>
 
             <TableRow
+                android:id="@+id/row4"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -145,7 +158,8 @@
                     android:text="Keterampilan Humanistik"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,7 +167,8 @@
                     android:text="250"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/txtPoinHumDet"
@@ -162,11 +177,13 @@
                     android:text="[poinHum]"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
             </TableRow>
 
             <TableRow
+                android:id="@+id/row5"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -176,7 +193,8 @@
                     android:text="Keterampilan Penunjang"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -184,7 +202,8 @@
                     android:text="0"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/txtPoinPenDet"
@@ -193,11 +212,13 @@
                     android:text="[poinPen]"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
             </TableRow>
 
             <TableRow
+                android:id="@+id/row6"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
@@ -209,7 +230,8 @@
                     android:textSize="14dp"
                     android:background="@drawable/cell"
                     android:gravity="center"
-                    android:padding="3dp"/>
+                    android:padding="3dp"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/txtPoinTotalDet"
@@ -218,8 +240,8 @@
                     android:text="[totalPoin]"
                     android:textSize="14dp"
                     android:background="@drawable/cell"
-                    android:padding="3dp"/>
-
+                    android:padding="3dp"
+                    android:textColor="@color/black"/>
 
             </TableRow>
 
