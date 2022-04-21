@@ -53,7 +53,7 @@ public class DetailAkun extends AppCompatActivity {
 
         txtInputPoin = findViewById(R.id.txtInputPoin);
 
-        String namaa = getIntent().getStringExtra("nama");
+        String namaa = getIntent().getStringExtra("namaFile");
 
         db = FirebaseFirestore.getInstance();
 
