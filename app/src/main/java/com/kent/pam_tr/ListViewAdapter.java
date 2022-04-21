@@ -41,9 +41,11 @@ public class ListViewAdapter extends ArrayAdapter<Data> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), data.getNama(), Toast.LENGTH_SHORT).show();
+                String naam = data.getNama();
 
-                Intent intent = new Intent(v.getContext(), DetailAkun.class);
-                v.getContext().startActivity(intent);
+                Intent intentToDetail = new Intent(v.getContext(), DetailAkun.class);
+                intentToDetail.putExtra("nama", naam);
+                v.getContext().startActivity(intentToDetail);
             }
         });
         return listitemView;
