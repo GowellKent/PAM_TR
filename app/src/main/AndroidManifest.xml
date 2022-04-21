@@ -15,7 +15,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HomeAdminActivity" />
         <activity
             android:name=".DetailAkun"
             android:exported="false" />
